@@ -1,0 +1,969 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+	
+    <title>Symbaroum Character Creator</title>
+  </head>
+  <body>
+	<!-- ********************************* -->
+	<!-- HEADER -->
+	<!-- ********************************* -->
+	<header>
+		<nav id="header-nav" class="navbar navbar-light fixed-top navbar-fixed-top navbar-expand-lg">
+			<a class="navbar-brand" href="#">Symbaroum Character Generator</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#basicinfo">Basic information<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#stats">Stats</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#abilities-powers">Abilities/Powers</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#weapons-armor">Weapons/Armor</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#fluffInformation">Description</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- ********************************* -->
+	<!-- BASIC INFORMATION -->
+	<!-- ********************************* -->
+    <div id="basicinfo" class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+				<h1 class="text-center">BASIC INFORMATION</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				<form>
+					<div class="form-group">
+						<label for="player-name-input">Player</label>
+						<input type="text" id="player-name-input" class="form-control"></input>
+					</div>
+					<div class="form-group">
+						<label for="character-name-input">Name</label>
+						<input type="text" id="character-name-input" class="form-control"></input>
+					</div>
+					<div class="form-group">
+						<label for="race-select">Race</label>
+						<select id="race-select" class="form-control">
+							<option selected>Choose race</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="character-occupation-input">Occupation</label>
+						<input type="text" id="character-occupation-input" class="form-control"></input>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				<div class="container">
+					<div class="row statstop">
+						<div class="col-4 border">
+							<p>0</p>
+							<label>Toughness</label>
+						</div>
+						<div class="col-4 border-top border-right border-bottom">
+							<p>0</p>
+							<label>Pain Threshold</label>
+						</div>
+						<div class="col-4 border-top border-right border-bottom">
+							<p>0</p>
+							<label>Corruption</label>
+						</div>
+					</div>
+					<div class="row statsbottom">
+						<div class="col-4 border-right border-left border-bottom">
+							<p>0</p>
+							<label>Maximum</label>
+						</div>
+						<div class="col-4 border-right border-bottom">
+							<p>0</p>
+							<label>Corruption Threshold</label>
+						</div>
+						<div class="col-4 border-right border-bottom">
+							<p>0</p>
+							<label>Permanent</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				<form>
+					<div class="form-group">
+						<label for="shadow-input">Shadow</label>
+						<input type="text" id="shadow-input" class="form-control"></input>
+					</div>
+					<div class="input-group">
+							<div class="expunsp col-8">
+								<label for="experience-input">Experience</label>
+							</div>
+							<div class="expunsp col-4">
+								<label for="unspent-input">Unspent</label>
+							</div>
+					</div>
+					<div class="input-group">
+						<input type="number" id="experience-input" class="form-control col-8"></input>
+						<input type="number" id="unspent-input" class="form-control col-4"></input>
+					</div>
+					<div id="quote-input-div" class="form-group">
+						<label for="quote-input">Quote</label>
+						<input type="text" id="quote-input" class="form-control"></input>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- ********************************* -->
+	<!-- STATS -->
+	<!-- ********************************* -->
+	<div id="stats" class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+				<h1 class="text-center">ATTRIBUTES</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-1 col-md-3 col-sm-3 col-xs-3">
+				<div class="form-group">
+					<input type="number" id="accurate-stat-input" class="form-control"></input>
+					<label for="accurate-stat-input">Accurate</label>
+				</div>
+			</div>
+			<div class="col-lg-1 col-md-3 col-sm-3 col-xs-3">
+				<div class="form-group">
+					<input type="number" id="cunning-stat-input" class="form-control"></input>
+					<label for="cunning-stat-input">Cunning</label>
+				</div>
+			</div>
+			<div class="col-lg-1 col-md-3 col-sm-3 col-xs-3">
+				<div class="form-group">
+					<input type="number" id="discreet-stat-input" class="form-control"></input>
+					<label for="discreet-stat-input">Discreet</label>
+				</div>
+			</div>
+			<div class="col-lg-1 col-md-3 col-sm-3 col-xs-3">
+				<div class="form-group">
+					<input type="number" id="persuasive-stat-input" class="form-control"></input>
+					<label for="persuasive-stat-input">Persuasive</label>
+				</div>
+			</div>
+			<div class="col-lg-1 col-md-3 col-sm-3 col-xs-3">
+				<div class="form-group">
+					<input type="number" id="quick-stat-input" class="form-control"></input>
+					<label for="quick-stat-input">Quick</label>
+				</div>
+			</div>
+			<div class="col-lg-1 col-md-3 col-sm-3 col-xs-3">
+				<div class="form-group">
+					<input type="number" id="resolute-stat-input" class="form-control"></input>
+					<label for="resolute-stat-input">Resolute</label>
+				</div>
+			</div>
+			<div class="col-lg-1 col-md-3 col-sm-3 col-xs-3">
+				<div class="form-group">
+					<input type="number" id="strongtrong-stat-input" class="form-control"></input>
+					<label for="strong-stat-input">Strong</label>
+				</div>
+			</div>
+			<div class="col-lg-1 col-md-3 col-sm-3 col-xs-3">
+				<div class="form-group">
+					<input type="number" id="vigilant-stat-input" class="form-control"></input>
+					<label for="vigilant-stat-input">Vigilant</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ********************************* -->
+	<!-- ABILITIES AND POWERS -->
+	<!-- ********************************* -->
+	<div id="abilities-powers" class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+				<h1 class="text-center">ABILITIES & POWERS</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="form-group">
+					<label for="ability-1-select">Name</label>
+					<select id="ability-1-select" class="form-control">
+						<option selected>Choose ability/power</option>
+						<option>Privileged</option>
+						<option>Dominate</option>
+						<option>Leader</option>
+						<option>Two-Handed Force</option>
+					</select>
+					<label>Effect</label>
+					<label>Type</label>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap1" id="ability-power-1-n" value="option1">
+						<label class="form-check-label" for="ability-power-1-n">N</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap1" id="ability-power-1-a" value="option2">
+						<label class="form-check-label" for="ability-power-1-a">A</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap1" id="ability-power-1-m" value="option3">
+						<label class="form-check-label" for="ability-power-1-m">M</label>
+					</div>
+				</div>
+			</div>
+	
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="form-group">
+					<label for="ability-2-select">Name</label>
+					<select id="ability-2-select" class="form-control">
+						<option selected>Choose ability/power</option>
+						<option>Privileged</option>
+						<option>Dominate</option>
+						<option>Leader</option>
+						<option>Two-Handed Force</option>
+					</select>
+					<label>Effect</label>
+					<label>Type</label>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap2" id="ability-power-2-n" value="option1">
+						<label class="form-check-label" for="ability-power-2-n">N</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap2" id="ability-power-2-a" value="option2">
+						<label class="form-check-label" for="ability-power-2-a">A</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap2" id="ability-power-2-m" value="option3">
+						<label class="form-check-label" for="ability-power-2-m">M</label>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="form-group">
+					<label for="ability-3-select">Name</label>
+					<select id="ability-3-select" class="form-control">
+						<option selected>Choose ability/power</option>
+						<option>Privileged</option>
+						<option>Dominate</option>
+						<option>Leader</option>
+						<option>Two-Handed Force</option>
+					</select>
+					<label>Effect</label>
+					<label>Type</label>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap3" id="ability-power-3-n" value="option1">
+						<label class="form-check-label" for="ability-power-3-n">N</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap3" id="ability-power-3-a" value="option2">
+						<label class="form-check-label" for="ability-power-3-a">A</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap3" id="ability-power-3-m" value="option3">
+						<label class="form-check-label" for="ability-power-3-m">M</label>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="form-group">
+					<label for="ability-4-select">Name</label>
+					<select id="ability-4-select" class="form-control">
+						<option selected>Choose ability/power</option>
+						<option>Privileged</option>
+						<option>Dominate</option>
+						<option>Leader</option>
+						<option>Two-Handed Force</option>
+					</select>
+					<label>Effect</label>
+					<label>Type</label>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap4" id="ability-power-4-n" value="option1">
+						<label class="form-check-label" for="ability-power-4-n">N</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap4" id="ability-power-4-a" value="option2">
+						<label class="form-check-label" for="ability-power-4-a">A</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap4" id="ability-power-4-m" value="option3">
+						<label class="form-check-label" for="ability-power-4-m">M</label>
+					</div>
+				</div>
+			</div>
+	
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="form-group">
+					<label for="ability-5-select">Name</label>
+					<select id="ability-5-select" class="form-control">
+						<option selected>Choose ability/power</option>
+						<option>Privileged</option>
+						<option>Dominate</option>
+						<option>Leader</option>
+						<option>Two-Handed Force</option>
+					</select>
+					<label>Effect</label>
+					<label>Type</label>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap5" id="ability-power-5-n" value="option1">
+						<label class="form-check-label" for="ability-power-5-n">N</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap5" id="ability-power-5-a" value="option2">
+						<label class="form-check-label" for="ability-power-5-a">A</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap5" id="ability-power-5-m" value="option3">
+						<label class="form-check-label" for="ability-power-5-m">M</label>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="form-group">
+					<label for="ability-6-select">Name</label>
+					<select id="ability-6-select" class="form-control">
+						<option selected>Choose ability/power</option>
+						<option>Privileged</option>
+						<option>Dominate</option>
+						<option>Leader</option>
+						<option>Two-Handed Force</option>
+					</select>
+					<label>Effect</label>
+					<label>Type</label>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap6" id="ability-power-6-n" value="option1">
+						<label class="form-check-label" for="ability-power-6-n">N</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap6" id="ability-power-6-a" value="option2">
+						<label class="form-check-label" for="ability-power-6-a">A</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap6" id="ability-power-6-m" value="option3">
+						<label class="form-check-label" for="ability-power-6-m">M</label>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="form-group">
+					<label for="ability-7-select">Name</label>
+					<select id="ability-7-select" class="form-control">
+						<option selected>Choose ability/power</option>
+						<option>Privileged</option>
+						<option>Dominate</option>
+						<option>Leader</option>
+						<option>Two-Handed Force</option>
+					</select>
+					<label>Effect</label>
+					<label>Type</label>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap7" id="ability-power-7-n" value="option1">
+						<label class="form-check-label" for="ability-power-7-n">N</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap7" id="ability-power-7-a" value="option2">
+						<label class="form-check-label" for="ability-power-7-a">A</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap7" id="ability-power-7-m" value="option3">
+						<label class="form-check-label" for="ability-power-7-m">M</label>
+					</div>
+				</div>
+			</div>
+	
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="form-group">
+					<label for="ability-8-select">Name</label>
+					<select id="ability-8-select" class="form-control">
+						<option selected>Choose ability/power</option>
+						<option>Privileged</option>
+						<option>Dominate</option>
+						<option>Leader</option>
+						<option>Two-Handed Force</option>
+					</select>
+					<label>Effect</label>
+					<label>Type</label>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap8" id="ability-power-8-n" value="option1">
+						<label class="form-check-label" for="ability-power-8-n">N</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap8" id="ability-power-8-a" value="option2">
+						<label class="form-check-label" for="ability-power-8-a">A</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap8" id="ability-power-8-m" value="option3">
+						<label class="form-check-label" for="ability-power-8-m">M</label>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="form-group">
+					<label for="ability-9-select">Name</label>
+					<select id="ability-9-select" class="form-control">
+						<option selected>Choose ability/power</option>
+						<option>Privileged</option>
+						<option>Dominate</option>
+						<option>Leader</option>
+						<option>Two-Handed Force</option>
+					</select>
+					<label>Effect</label>
+					<label>Type</label>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap9" id="ability-power-9-n" value="option1">
+						<label class="form-check-label" for="ability-power-9-n">N</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap9" id="ability-power-9-a" value="option2">
+						<label class="form-check-label" for="ability-power-9-a">A</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap9" id="ability-power-9-m" value="option3">
+						<label class="form-check-label" for="ability-power-9-m">M</label>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="form-group">
+					<label for="ability-10-select">Name</label>
+					<select id="ability-10-select" class="form-control">
+						<option selected>Choose ability/power</option>
+						<option>Privileged</option>
+						<option>Dominate</option>
+						<option>Leader</option>
+						<option>Two-Handed Force</option>
+					</select>
+					<label>Effect</label>
+					<label>Type</label>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap10" id="ability-power-10-n" value="option1">
+						<label class="form-check-label" for="ability-power-10-n">N</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap10" id="ability-power-10-a" value="option2">
+						<label class="form-check-label" for="ability-power-10-a">A</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap10" id="ability-power-10-m" value="option3">
+						<label class="form-check-label" for="ability-power-10-m">M</label>
+					</div>
+				</div>
+			</div>
+	
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="form-group">
+					<label for="ability-11-select">Name</label>
+					<select id="ability-11-select" class="form-control">
+						<option selected>Choose ability/power</option>
+						<option>Privileged</option>
+						<option>Dominate</option>
+						<option>Leader</option>
+						<option>Two-Handed Force</option>
+					</select>
+					<label>Effect</label>
+					<label>Type</label>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap11" id="ability-power-11-n" value="option1">
+						<label class="form-check-label" for="ability-power-11-n">N</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap11" id="ability-power-11-a" value="option2">
+						<label class="form-check-label" for="ability-power-11-a">A</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap11" id="ability-power-11-m" value="option3">
+						<label class="form-check-label" for="ability-power-11-m">M</label>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="form-group">
+					<label for="ability-12-select">Name</label>
+					<select id="ability-12-select" class="form-control">
+						<option selected>Choose ability/power</option>
+						<option>Privileged</option>
+						<option>Dominate</option>
+						<option>Leader</option>
+						<option>Two-Handed Force</option>
+					</select>
+					<label>Effect</label>
+					<label>Type</label>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap12" id="ability-power-12-n" value="option1">
+						<label class="form-check-label" for="ability-power-12-n">N</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap12" id="ability-power-12-a" value="option2">
+						<label class="form-check-label" for="ability-power-12-a">A</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="ap12" id="ability-power-12-m" value="option3">
+						<label class="form-check-label" for="ability-power-12-m">M</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ********************************* -->
+	<!-- WEAPONS AND ARMOR -->
+	<!-- ********************************* -->
+	<div id="weapons-armor" class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+				<h1 class="text-center">WEAPONS & ARMOR</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 col-sm-12 col-xs-12 form-group">
+				<div class="row">
+					<div class="col-md-4 col-sm-12 col-xs-4">
+						<label>Weapon</label>
+						<select class="form-control">
+							<option selected>Choose weapon</option>
+							<option>Dagger</option>
+							<option>Sword</option>
+							<option>Shield</option>
+						</select>
+					</div>
+					<div class="col-md-2 col-sm-4 col-xs-4">
+						<label>Damage</label>
+						<p>Damage Placeholder</p>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-4">
+						<label>Quality</label>
+						<p>Quality Placeholder</p>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-4">
+						<label>Attribute</label>
+						<p>Attribute Placeholder</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 col-sm-12 col-xs-4">
+						<label>Weapon</label>
+						<select class="form-control">
+							<option selected>Choose weapon</option>
+							<option>Dagger</option>
+							<option>Sword</option>
+							<option>Shield</option>
+						</select>
+					</div>
+					<div class="col-md-2 col-sm-4 col-xs-4">
+						<label>Damage</label>
+						<p>Damage Placeholder</p>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-4">
+						<label>Quality</label>
+						<p>Quality Placeholder</p>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-4">
+						<label>Attribute</label>
+						<p>Attribute Placeholder</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 col-sm-12 col-xs-4">
+						<label>Weapon</label>
+						<select class="form-control">
+							<option selected>Choose weapon</option>
+							<option>Dagger</option>
+							<option>Sword</option>
+							<option>Shield</option>
+						</select>
+					</div>
+					<div class="col-md-2 col-sm-4 col-xs-4">
+						<label>Damage</label>
+						<p>Damage Placeholder</p>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-4">
+						<label>Quality</label>
+						<p>Quality Placeholder</p>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-4">
+						<label>Attribute</label>
+						<p>Attribute Placeholder</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 col-sm-12 col-xs-4">
+						<label>Weapon</label>
+						<select class="form-control">
+							<option selected>Choose weapon</option>
+							<option>Dagger</option>
+							<option>Sword</option>
+							<option>Shield</option>
+						</select>
+					</div>
+					<div class="col-md-2 col-sm-4 col-xs-4">
+						<label>Damage</label>
+						<p>Damage Placeholder</p>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-4">
+						<label>Quality</label>
+						<p>Quality Placeholder</p>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-4">
+						<label>Attribute</label>
+						<p>Attribute Placeholder</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				<div class="row">
+					<div class="col-md-6 col-sm-12 col-xs-12 form-group">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<label>Armor</label>
+								<select class="form-control">
+									<option selected>Choose armor</option>
+									<option>Fortified Chainmail</option>
+									<option>Shiled</option>
+								</select>
+							</div>
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<label>Protection</label>
+								<p>Placeholder</p>
+							</div>
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<label>Quality</label>
+								<p>Placeholder</p>
+							</div>
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<div>
+									<p>Placeholder</p>
+									<label>Defense</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12 col-xs-12 form-group">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<label>Armor</label>
+								<select class="form-control">
+									<option selected>Choose armor</option>
+									<option>Fortified Chainmail</option>
+									<option>Shiled</option>
+								</select>
+							</div>
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<label>Protection</label>
+								<p>Placeholder</p>
+							</div>
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<label>Quality</label>
+								<p>Placeholder</p>
+							</div>
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<div>
+									<p>Placeholder</p>
+									<label>Defense</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ********************************* -->
+	<!-- ADDITIONAL INFORMATION -->
+	<!-- ********************************* -->
+	<div class="container">
+		<div class="row">
+			<div id="fluffInformation" class="col-md-8 col-sm-12 col-xs-12">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+						<h1 class="text-center">DESCRIPTION</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-xs-6">
+						
+						<div class="row">
+							<div class="col-md-4 col-sm-4 col-xs-4 form-group">
+								<label>Age</label>
+								<input type="number" id="age" class="form-control"></input>
+							</div>
+							<div class="col-md-4 col-sm-4 col-xs-4 form-group">
+								<label>Height</label>
+								<input type="text" id="height" class="form-control"></input>
+							</div>
+							<div class="col-md-4 col-sm-4 col-xs-4 form-group">
+								<label>Weight</label>
+								<input type="text" id="weight" class="form-control"></input>
+							</div>
+							<div class="col-md-12 col-sm-12 col-xs-12 form-group">
+								<label>Appearance</label>
+								<input type="text" id="appearance" class="form-control"></input>
+							</div>
+							<div class="col-md-12 col-sm-12 col-xs-12 form-group">
+								<label>Background</label>
+								<input type="text" id="background" class="form-control"></input>
+							</div>
+							<div class="col-md-12 col-sm-12 col-xs-12 form-group">
+								<label>Personal Goal</label>
+								<input type="text" id="personalgoal" class="form-control"></input>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-6">
+						<img src="img/oushi.jpg" id="characterportrait" width= "350" alt="Placeholder image"></img>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+						<h1 class="text-center">FRIENDS & COMPANIONS</h1>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="row">
+							<div class="col-md-3 col-sm-3 col-xs-3 form-group">
+								<label>Name</label>
+								<input type="text" id="nameally1" class="form-control"></input>
+							</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 form-group">
+								<label>Race</label>
+								<input type="text" id="raceally1" class="form-control"></input>
+							</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 form-group">
+								<label>Occupation</label>
+								<input type="text" id="occupationally1" class="form-control"></input>
+							</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 form-group">
+								<label>Player</label>
+								<input type="text" id="playerally1" class="form-control"></input>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 col-sm-3 col-xs-3 form-group">
+								<label>Name</label>
+								<input type="text" id="nameally2" class="form-control"></input>
+							</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 form-group">
+								<label>Race</label>
+								<input type="text" id="raceally2" class="form-control"></input>
+							</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 form-group">
+								<label>Occupation</label>
+								<input type="text" id="occupationally2" class="form-control"></input>
+							</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 form-group">
+								<label>Player</label>
+								<input type="text" id="playerally2" class="form-control"></input>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 col-sm-3 col-xs-3 form-group">
+								<label>Name</label>
+								<input type="text" id="nameally3" class="form-control"></input>
+							</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 form-group">
+								<label>Race</label>
+								<input type="text" id="raceally3" class="form-control"></input>
+							</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 form-group">
+								<label>Occupation</label>
+								<input type="text" id="occupationally3" class="form-control"></input>
+							</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 form-group">
+								<label>Player</label>
+								<input type="text" id="playerally3" class="form-control"></input>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 col-sm-3 col-xs-3 form-group">
+								<label>Name</label>
+								<input type="text" id="nameally4" class="form-control"></input>
+							</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 form-group">
+								<label>Race</label>
+								<input type="text" id="raceally4" class="form-control"></input>
+							</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 form-group">
+								<label>Occupation</label>
+								<input type="text" id="occupationally4" class="form-control"></input>
+							</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 form-group">
+								<label>Player</label>
+								<input type="text" id="playerally4" class="form-control"></input>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12 form-group">
+								<label>Group name</label>
+								<input type="text" id="groupname" class="form-control"></input>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12 form-group">
+								<label>Group goal</label>
+								<input type="text" id="groupgoal" class="form-control"></input>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+						<h1 class="text-center">ARTIFACTS & MYSTICAL TREASURES</h1>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="row">
+							<div class="col-md-4 col-sm-4 col-xs-12">
+								<label>Name</label>
+								<input type="text" id="nameartifact1" class="form-control"></input>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<label>Powers</label>
+								<input type="text" id="powersartifact1" class="form-control"></input>
+							</div>
+							<div class="col-md-2 col-sm-2 col-xs-12">
+								<label>Corruption</label>
+								<input type="text" id="corruptionartifact1" class="form-control"></input>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-sm-4 col-xs-12">
+								<label>Name</label>
+								<input type="text" id="nameartifact2" class="form-control"></input>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<label>Powers</label>
+								<input type="text" id="powersartifact2" class="form-control"></input>
+							</div>
+							<div class="col-md-2 col-sm-2 col-xs-12">
+								<label>Corruption</label>
+								<input type="text" id="corruptionartifact2" class="form-control"></input>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-sm-4 col-xs-12">
+								<label>Name</label>
+								<input type="text" id="nameartifact3" class="form-control"></input>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<label>Powers</label>
+								<input type="text" id="powersartifact3" class="form-control"></input>
+							</div>
+							<div class="col-md-2 col-sm-2 col-xs-12">
+								<label>Corruption</label>
+								<input type="text" id="corruptionartifact3" class="form-control"></input>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-sm-4 col-xs-12">
+								<label>Name</label>
+								<input type="text" id="nameartifact4" class="form-control"></input>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<label>Powers</label>
+								<input type="text" id="powersartifact4" class="form-control"></input>
+							</div>
+							<div class="col-md-2 col-sm-2 col-xs-12">
+								<label>Corruption</label>
+								<input type="text" id="corruptionartifact4" class="form-control"></input>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="equipmentSection" class="col-md-4 col-sm-12 col-xs-12">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+						<h1 class="text-center">EQUIPMENT</h1>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment1" class="form-control"></input>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment2" class="form-control"></input>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment3" class="form-control"></input>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment4" class="form-control"></input>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment5" class="form-control"></input>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment6" class="form-control"></input>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment7" class="form-control"></input>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment8" class="form-control"></input>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment9" class="form-control"></input>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment10" class="form-control"></input>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment11" class="form-control"></input>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment12" class="form-control"></input>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment13" class="form-control"></input>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment14" class="form-control"></input>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment15" class="form-control"></input>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment16" class="form-control"></input>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment17" class="form-control"></input>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment18" class="form-control"></input>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment19" class="form-control"></input>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment20" class="form-control"></input>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<input type="text" id="equipment21" class="form-control"></input>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="json/lists.json"></script>
+	<script type="text/javascript" src="js/sitesetup.js"></script>
+  </body>
+</html>

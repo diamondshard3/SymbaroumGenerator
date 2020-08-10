@@ -1,0 +1,42 @@
+[
+	{
+		"name": "Changeling",
+		"value": "Changeling"
+	},
+	{
+		"name": "Dwarf",
+		"value": "Dwarf"
+	},
+	{
+		"name": "Elf",
+		"value": "Elf"
+	},
+	{
+		"name": "Goblin",
+		"value": "Goblin"
+	},
+	{
+		"name": "Human (Ambrian)",
+		"value": "HumanAmbrian"
+	},
+	{
+		"name": "Human (Abducted)",
+		"value": "HumanAbducted"
+	},
+	{
+		"name": "Human (Barbarian)",
+		"value": "HumanBarbarian"
+	},
+	{
+		"name": "Ogre",
+		"value": "Ogre"
+	},
+	{
+		"name": "Troll",
+		"value": "Troll"
+	},
+	{
+		"name": "Undead",
+		"value": "Undead"
+	}
+]

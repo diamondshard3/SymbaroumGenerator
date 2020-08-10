@@ -1,0 +1,108 @@
+body {
+	font-family:Lora;
+	font-size: 16px;
+	color: #000000;
+	/* background-color: #DEB887; */
+	padding-top:70px; /* Account for Bootstrap navbar sticking to the top */
+	background-image: url("../img/orange_on_black_celtic_squares_seamless_background_pattern.jpg");
+	background-repeat: repeat;
+}
+
+#header-nav {
+	border-radius: 0;
+	border: 0;
+	background-color: #654321;
+}
+
+h1 {
+	font-size: 16px;
+	background-color:#000000;
+	color:#FFFFFF;
+	margin-top: 5px;
+}
+
+.row {
+	background-color: #DEB887;
+}
+
+/* Center align the inputs for the stats */
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Gets rid of all rounded corners in bootstrap.  Might need modifying later on down the road. */
+* {
+  border-radius: 0 !important;
+}
+
+.expunsp {
+	padding: 0px;
+}
+
+#quote-input-div {
+	padding-top: 12px;
+}
+
+.navbar-brand {
+	color:#FFFFFF;
+}
+
+#navbarDropdown {
+	color:#FFFFFF;
+}
+
+.statbox {
+	border: 1px solid #000;
+}
+
+
+
+@font-face {
+	src:
+}
+/*
+******* Use this to change the background color of stuff to the same as the background
+.form-control {
+	background:#DEB887;
+}
+*/
+
+/* Media Selectors */
+/* Desktop */
+@media (min-width: 992px)
+{
+
+	li.nav-item{
+		border-right: 1px solid #000;
+	}
+
+	li.nav-item:first-of-type{
+		  border-left: 1px solid #000;
+	}
+	
+	.statstop {
+		height: 175px;
+	}
+
+	.statsbottom {
+		height: 175px;
+	}
+	
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px)
+{
+	
+
+}
+
+/* Smartphone */
+@media (max-width: 767px)
+{
+	
+
+}
+
