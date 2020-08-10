@@ -1,0 +1,2 @@
+# SymbaroumGenerator
+Symbaroum Character Generator
